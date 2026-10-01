@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Transactions | BudgetNest</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="logo">
+        <span>💰</span> BudgetNest
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="budget.html">Budget</a>
+        <a href="transactions.html" class="active">Transactions</a>
+        <a href="profile.html">Profile</a>
+    </nav>
+
+</header>
+
+
+<main class="dashboard-container">
+
+    <div class="page-heading">
+
+        <div>
+
+            <span class="badge">Money Activity</span>
+
+            <h1>Transactions 🧾</h1>
+
+            <p>
+                Add and manage your income and expenses.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <section class="transaction-layout">
+
+        <div class="content-card">
+
+            <h2>Add Transaction</h2>
+
+            <p class="card-description">
+                Record your latest income or expense.
+            </p>
+
+
+            <form id="transactionForm">
+
+                <label for="transactionName">
+                    Description
+                </label>
+
+                <input
+                    type="text"
+                    id="transactionName"
+                    placeholder="e.g. Groceries"
+                    required
+                >
+
+
+                <label for="transactionAmount">
+                    Amount
+                </label>
+
+                <input
+                    type="number"
+                    id="transactionAmount"
+                    placeholder="500"
+                    min="0"
+                    step="0.01"
+                    required
+                >
+
+
+                <label for="transactionType">
+                    Type
+                </label>
+
+                <select id="transactionType">
+
+                    <option value="expense">
+                        Expense
+                    </option>
+
+                    <option value="income">
+                        Income
+                    </option>
+
+                </select>
+
+
+                <button type="submit" class="primary-button full-width">
+                    Add Transaction
+                </button>
+
+            </form>
+
+            <p id="transactionMessage" class="form-message"></p>
+
+        </div>
+
+
+        <div class="content-card">
+
+            <div class="card-title">
+
+                <div>
+                    <h2>Transaction History</h2>
+                    <p>All your recorded transactions</p>
+                </div>
+
+            </div>
+
+            <div id="transactionList"></div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+    <p>© 2026 BudgetNest. Personal finance made simple.</p>
+</footer>
+
+
+<script src="js/app.js"></script>
+
+</body>
+</html>

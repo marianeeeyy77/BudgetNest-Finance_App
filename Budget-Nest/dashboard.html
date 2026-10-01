@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | BudgetNest</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="logo">
+        <span>💰</span> BudgetNest
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="dashboard.html" class="active">Dashboard</a>
+        <a href="budget.html">Budget</a>
+        <a href="transactions.html">Transactions</a>
+        <a href="profile.html">Profile</a>
+    </nav>
+
+    <button class="logout-button" id="logoutButton">
+        Logout
+    </button>
+
+</header>
+
+
+<main class="dashboard-container">
+
+    <div class="page-heading">
+
+        <div>
+            <span class="badge">Personal Finance</span>
+
+            <h1>Good day! 👋</h1>
+
+            <p>
+                Here's an overview of your finances.
+            </p>
+        </div>
+
+        <a href="transactions.html" class="primary-button">
+            + Add Transaction
+        </a>
+
+    </div>
+
+
+    <section class="stats-grid">
+
+        <div class="stat-card">
+
+            <div class="stat-icon">💰</div>
+
+            <span>Total Balance</span>
+
+            <h2 id="totalBalance">₱0.00</h2>
+
+            <small>Available balance</small>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon income">📈</div>
+
+            <span>Total Income</span>
+
+            <h2 id="totalIncome">₱0.00</h2>
+
+            <small>This month</small>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon expense">📉</div>
+
+            <span>Total Expenses</span>
+
+            <h2 id="totalExpenses">₱0.00</h2>
+
+            <small>This month</small>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon savings">🎯</div>
+
+            <span>Savings</span>
+
+            <h2 id="totalSavings">₱0.00</h2>
+
+            <small>Income minus expenses</small>
+
+        </div>
+
+    </section>
+
+
+    <section class="dashboard-grid">
+
+        <div class="content-card">
+
+            <div class="card-title">
+
+                <div>
+                    <h2>Recent Transactions</h2>
+                    <p>Your latest financial activity</p>
+                </div>
+
+                <a href="transactions.html">View All →</a>
+
+            </div>
+
+            <div id="recentTransactions"></div>
+
+        </div>
+
+
+        <div class="content-card">
+
+            <div class="card-title">
+
+                <div>
+                    <h2>Monthly Budget</h2>
+                    <p>Your spending progress</p>
+                </div>
+
+                <a href="budget.html">Manage →</a>
+
+            </div>
+
+            <div class="budget-progress">
+
+                <div class="progress-info">
+                    <span>Monthly spending</span>
+                    <strong id="budgetAmount">₱0 / ₱20,000</strong>
+                </div>
+
+                <div class="progress-bar">
+                    <div id="budgetProgress"></div>
+                </div>
+
+                <p id="budgetText">
+                    You're doing great!
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+    <p>© 2026 BudgetNest. Personal finance made simple.</p>
+</footer>
+
+
+<script src="js/app.js"></script>
+
+</body>
+</html>

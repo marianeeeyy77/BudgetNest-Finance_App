@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Budget | BudgetNest</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="logo">
+        <span>💰</span> BudgetNest
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="budget.html" class="active">Budget</a>
+        <a href="transactions.html">Transactions</a>
+        <a href="profile.html">Profile</a>
+    </nav>
+
+</header>
+
+
+<main class="dashboard-container">
+
+    <div class="page-heading">
+
+        <div>
+
+            <span class="badge">Budget Planner</span>
+
+            <h1>My Budget 💰</h1>
+
+            <p>
+                Plan your spending and stay on track.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <section class="budget-overview">
+
+        <div class="content-card">
+
+            <h2>Monthly Budget</h2>
+
+            <p>Set your monthly spending limit.</p>
+
+            <form id="budgetForm">
+
+                <label for="budgetInput">
+                    Budget Amount
+                </label>
+
+                <input
+                    type="number"
+                    id="budgetInput"
+                    placeholder="20000"
+                    min="0"
+                    required
+                >
+
+                <button class="primary-button" type="submit">
+                    Save Budget
+                </button>
+
+            </form>
+
+            <p id="budgetMessage" class="form-message"></p>
+
+        </div>
+
+
+        <div class="content-card budget-summary">
+
+            <div class="big-budget-icon">
+                🎯
+            </div>
+
+            <h2 id="currentBudget">₱20,000</h2>
+
+            <p>Current monthly budget</p>
+
+            <div class="progress-bar">
+                <div id="budgetPageProgress"></div>
+            </div>
+
+            <strong id="remainingBudget">
+                ₱20,000 remaining
+            </strong>
+
+        </div>
+
+    </section>
+
+
+    <section class="content-card">
+
+        <div class="card-title">
+
+            <div>
+                <h2>Budget Tips 💡</h2>
+                <p>Small habits can make a big difference.</p>
+            </div>
+
+        </div>
+
+
+        <div class="tips-grid">
+
+            <div class="tip">
+                <span>1</span>
+                <div>
+                    <h3>Track everything</h3>
+                    <p>Record your daily expenses.</p>
+                </div>
+            </div>
+
+
+            <div class="tip">
+                <span>2</span>
+                <div>
+                    <h3>Set realistic limits</h3>
+                    <p>Create a budget you can actually follow.</p>
+                </div>
+            </div>
+
+
+            <div class="tip">
+                <span>3</span>
+                <div>
+                    <h3>Save first</h3>
+                    <p>Set aside money before spending.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+    <p>© 2026 BudgetNest. Personal finance made simple.</p>
+</footer>
+
+
+<script src="js/app.js"></script>
+
+</body>
+</html>
